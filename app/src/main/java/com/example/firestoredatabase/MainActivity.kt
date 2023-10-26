@@ -33,7 +33,6 @@ class MainActivity() : AppCompatActivity(), DataAdapter.ItemClickListener {
             val birthday = binding.birthEtxt.text.toString()
 
             if (id.isNotEmpty() && name.isNotEmpty() && email.isNotEmpty() && subject.isNotEmpty() && birthday.isNotEmpty()) {
-                // Check if we are adding or updating
                 if (binding.addBtn.text == "ADD") {
                     addData(id, name, email, subject, birthday)
                 } else {
@@ -111,12 +110,12 @@ class MainActivity() : AppCompatActivity(), DataAdapter.ItemClickListener {
         dataCollection.document(data.id!!)
             .delete()
             .addOnSuccessListener {
-                data.remove(data)
                 adapter.notifyDataSetChanged()
-                Toast.makeText(this, "Data Deleted", Toast.LENGTH_SHORT).show()
+                fetchData()
+                Toast.makeText(this, "Data deleted", Toast.LENGTH_SHORT).show()
             }
-            .addOnFailureListener { exception ->
-                Toast.makeText(this, "Data deletion failed: ${exception.message}", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener {
+                Toast.makeText(this, "Data deletion failed", Toast.LENGTH_SHORT).show()
             }
     }
 }
