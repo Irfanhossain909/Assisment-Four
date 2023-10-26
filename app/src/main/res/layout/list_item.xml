@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_margin="15dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/idtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your ID..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/nametxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter your name..."
+            app:layout_constraintEnd_toEndOf="@+id/idtxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/idtxt"
+            app:layout_constraintTop_toBottomOf="@+id/idtxt" />
+
+        <TextView
+            android:id="@+id/emailtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter your email address..."
+            app:layout_constraintEnd_toEndOf="@+id/nametxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/nametxt"
+            app:layout_constraintTop_toBottomOf="@+id/nametxt" />
+
+        <TextView
+            android:id="@+id/subjecttxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter your Subject..."
+            app:layout_constraintEnd_toEndOf="@+id/emailtxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/emailtxt"
+            app:layout_constraintTop_toBottomOf="@+id/emailtxt" />
+
+        <TextView
+            android:id="@+id/birthtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter your date of birth.."
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="@+id/subjecttxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/subjecttxt"
+            app:layout_constraintTop_toBottomOf="@+id/subjecttxt" />
+
+        <ImageButton
+            android:id="@+id/editBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="268dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/white"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintStart_toStartOf="@+id/birthtxt"
+            app:layout_constraintTop_toBottomOf="@+id/birthtxt" />
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/white"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/editBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editBtn"
+            app:layout_constraintTop_toTopOf="@+id/editBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
